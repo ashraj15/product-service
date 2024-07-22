@@ -19,7 +19,7 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getMsg(@PathVariable("id") Integer productId){
-        Map<Integer, Product> productMap = productService.getProductDetails();
+        Map<Integer, Product> productMap = productService.getProductDetails()
         return new ResponseEntity<>(productMap.get(productId), HttpStatus.OK);
     }
 
